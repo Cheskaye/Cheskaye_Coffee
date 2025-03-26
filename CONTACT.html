@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Kaye's Coffee</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #3B2314;
+    color: #F5E5DC;
+    text-align: center;
+    padding: 20px;
+}
+html, body {
+    height: 100%;
+    overflow: hidden; 
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #5a3728;
+    padding: 15px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px; 
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-family: 'Great Vibes', cursive; 
+    font-size: 25px;
+    font-weight: normal;
+    color: #F5E5DC;
+    margin-left: -20px;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #E5B67A;
+    font-size: 18px;
+}
+nav ul li a.active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px; 
+    text-underline-offset: 5px; 
+    color: #E5B67A; 
+}
+
+h2 {
+    color: #E5B67A;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.contact-details {
+    width: 100%;
+    text-align: left; 
+    margin-bottom: 20px;
+}
+
+.contact-details h2 {
+    font-size: 32px;
+    color: #E5B67A;
+    text-align: left;
+    margin-left: -250px;
+    margin-top: -40px;
+}
+
+.contact-details p {
+    text-align: justify;
+    font-size: 21px;
+    line-height: 1.6;
+    margin-left: -250px;
+}
+
+form {
+    width: 94%;  
+    max-width: 900px; 
+    background-color: #5a3728;
+    margin: 0 auto 20px auto; 
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-top: -250px;
+    overflow: hidden;
+    margin-right: -290px;
+    height: 270px;
+    border: 1px solid #E5B67A;
+}
+
+form label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #E5B67A;
+    border-radius: 6px;
+    background-color: #3B2314;
+    color: #F5E5DC;
+    font-size: 16px;
+}
+
+form textarea {
+    height: 75px;
+    resize: none;
+}
+
+form button {
+    background-color: #E5B67A;
+    color: #3B2314;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background-color: #C18E5E;
+}
+
+
+.contact-map {
+    width: 800%; 
+    max-width: 900px; 
+    height: 300px;
+    border-radius: 12px;
+    position: absolute;
+    top: 90px;
+    right: 0; 
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+
+.social-media {
+    text-align: left; 
+    margin-top: 20px;
+}
+
+.social-media h2 {
+    margin-bottom: 10px;
+    font-size: 28px; 
+    color: #D3A062; 
+    font-weight: bold;
+    margin-left: -250px;
+    margin-top: -10px;
+}
+
+.social-media p {
+    color: white; 
+    font-size: 18px;
+    text-align: justify;
+    margin-left: -250px;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media li {
+    margin: 10px 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    text-align: justify; 
+}
+
+.social-media a {
+    text-decoration: none;
+    color: white; 
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px; 
+}
+
+.social-media i {
+    font-size: 24px;
+    margin-left: -250px;
+}
+
+.social-media .fa-facebook { color: #1877F2; }  
+.social-media .fa-instagram { color: #E4405F; } 
+.social-media .fa-tiktok { color: #000; }      
+
+
+@media (max-width: 768px) {
+    html, body {
+    height: auto;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+}
+
+
+.logo-container {
+    margin-left: 0; 
+}
+
+.brand-name {
+    font-size: 18px;
+    white-space: nowrap; 
+    margin-left: 5;
+}
+
+.logo {
+    height: 45px;
+    margin-left: -40px; 
+}
+
+nav ul {
+    gap: 5px; 
+    margin-left: 30px;
+    white-space: nowrap; 
+
+}
+
+nav ul li a {
+    font-size: 10px; 
+}
+.contact-container {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .contact-details {
+        width: 100%;
+        margin: 0;
+    }
+
+    .contact-details {
+    width: 100%;
+    text-align: left; 
+    margin-bottom: 20px;
+}
+
+.contact-details h2 {
+    font-size: 32px;
+    color: #E5B67A;
+    text-align: left;
+    margin-left: 0; 
+    margin-top: -40px;
+}
+
+.contact-details p {
+    text-align: justify;  
+    font-size: 16px;
+    line-height: 1.6;
+    margin-left: 0; 
+}
+
+    .social-media {
+    max-width: 500px; 
+    margin-left: auto; 
+    margin-right: 40px;;
+}
+.social-media p{
+    font-size: 16px;
+}
+.social-media a {
+    font-size: 16px; 
+}
+
+  
+.contact-map {
+    width: 90%;  
+    max-width: 800px;  
+    height: 300px;
+    margin-top: 740px; 
+}
+
+    form {
+        width: 90%; 
+        max-width: 450px;
+        padding: 15px;
+        margin-left: 1px;
+        margin-top: 1px;
+        height: 300px;
+        position: relative;
+        z-index: 10;
+    }
+    form button {
+    position: relative;
+    z-index: 20;
+}
+
+
+    iframe {
+        width: 100%;
+        height: 220px;
+        margin-top: 70px;
+    }
+
+}
+
+</style>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="coffeelogo.png" alt="Kaye's Coffee Logo" class="logo">
+            <span class="brand-name">Kaye's Coffee</span>
+        </div>
+        <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ICEDCOFFEE.html">Menu</a></li>
+                <li><a href="ABOUTUS.html">About us</a></li>
+                <li><a href="CONTACT.html"  class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<div class="contact-container">
+    <div class="contact-details">
+        <h2>Contact Kaye’s Coffee</h2>
+        <p><strong>📍 Address:</strong> Quezon City, 1115 Metro Manila</p>
+        <p><strong>📞 Phone:</strong> +63 954 304 6099</p>
+        <p><strong>📧 Email:</strong> fugabancheskaye2004@gmail.com</p>
+        <p><strong>🕒 Business Hours:</strong> Mon-Sun | 7:00 AM - 10:00 PM</p>
+    </div>
+
+<div class="social-media">
+    <h2>Follow Us on Social Media</h2>
+    <p>Stay connected with us!</p>
+    <ul>
+        <li><a href="https://www.facebook.com/share/169q856uBk/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+        <li><a href="https://www.instagram.com/kaye_fugaban/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@chocolateyyyyyy" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></li>
+    </ul>
+</div>
+
+
+
+    <form id="contactForm">
+    <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+
+<div class="contact-map">
+    <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.040857722324!2d121.00024637583646!3d14.65796818586068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7bd3320f89d%3A0x529e5a2d39d7a509!2sAyala%20Malls%20Cloverleaf!5e0!3m2!1sen!2sph!4v1711293911538" 
+        width="900" 
+        height="350" 
+        style="border-radius: 12px;"
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+</div>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    console.log("Form submitted"); 
+    alert("Thank you! Your message has been sent.");
+    this.reset();
+});
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
